@@ -1,0 +1,9 @@
+--- 
+   name: install neno
+   hosts: linux
+   tasks:
+   -name: Install the Oracle DB
+      yum: 
+   -name: neno
+    state: latest 
+   
