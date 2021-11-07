@@ -1,9 +1,19 @@
---- 
-   name: install neno
-   hosts: linux
-   tasks:
-   -name: Install the Oracle DB
-      yum: 
-   -name: neno
-    state: latest 
-   
+---
+- name: install nano 
+  hosts: linux
+  remote_user: root
+
+  tasks:
+  - name: Ensure apache is at the latest version
+    yum: 
+      name: nano
+      state: latest
+- name: install git
+  hosts: linux
+  remote_user: root
+
+  tasks:
+  - name: install the latest git version
+    yum:
+      name: git
+      state: latest
